@@ -10,9 +10,9 @@
 
 int main(int argc, char *argv[])
 {
-    QGuiApplication app(argc, argv);
+//    QGuiApplication app(argc, argv);
 
-//    QApplication app(argc,argv);
+    QApplication app(argc,argv);
     QQmlEngine engine;
 
 //    engine.setBaseUrl(QUrl(QStringLiteral("qrc:///qml/main.qml")));
@@ -25,24 +25,25 @@ int main(int argc, char *argv[])
 //    engine.rootContext()->findChild("tt");
 
     com.create();
-//    QTextEdit *x = new QTextEdit;
-//    x->setPlainText("@cui sef");
-//    x->setHtml("@cui sef");
-//    framedTextAttr *fa = new framedTextAttr;
 
-//    QTextCharFormat tmp;
-//    tmp.setForeground(Qt::red);
-//      x->document()->documentLayout()->registerHandler(framedTextAttr::textFormat, fa);
-//       tmp.setObjectType(fa->textFormat);
-//       QTextCursor c=x->document()->find("@cui");
-//       tmp.setProperty(fa->textProperty,c.selectedText());
-//       c.insertText(QString(QChar::ObjectReplacementCharacter), tmp);
+    QTextEdit *x = new QTextEdit;
+    x->setPlainText("@cui sef");
+    x->setHtml("@cui sef");
+    framedTextAttr *fa2 = new framedTextAttr;
 
-//    highlighter->sD2(x->document());
+    QTextCharFormat tmp;
+    tmp.setForeground(Qt::red);
+      x->document()->documentLayout()->registerHandler(framedTextAttr::textFormat, fa2);
+       tmp.setObjectType(fa2->textFormat);
+       QTextCursor c=x->document()->find("@cui");
+       tmp.setProperty(fa2->textProperty,c.selectedText());
+       c.insertText(QString(QChar::ObjectReplacementCharacter), tmp);
 
-//    QMainWindow xw;
-//    xw.setCentralWidget(x);
-//    xw.show();
+    highlighter->sD2(x->document());
+
+    QMainWindow xw;
+    xw.setCentralWidget(x);
+    xw.show();
 
 
 
